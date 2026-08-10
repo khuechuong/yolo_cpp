@@ -57,6 +57,14 @@ sudo cp -r onnxruntime-linux-x64-gpu_cuda13-1.27.1/include/* /usr/local/include/
 sudo cp -r onnxruntime-linux-x64-gpu_cuda13-1.27.1/lib/* /usr/local/lib/
 sudo ldconfig
 ```
+## Build
+```
+git clone https://github.com/khuechuong/yolo_cpp.git
+cd yolo_cpp
+mkdir build && cd build
+cmake ..
+make -j4
+```
 
 #### Debug & Verify
 Check if ldconfig know where libcudnn is
@@ -225,4 +233,11 @@ Run YOLO
     float* out1Data = outputs[1].GetTensorMutableData<float>();
 ```
 
-Full code at [main.cpp]()
+Full code at [main.cpp](main.cpp)
+
+# Run
+```
+cd yolo_cpp
+./build/yolo_culvert cuda <MODEL_PATH> <IMAGE_PATH> <OUTPUT_PATH>
+
+```
