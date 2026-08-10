@@ -1,5 +1,5 @@
-# ONNX in C++
-
+# YOLO C++
+A lightweight, high-speed C++ deployment framework designed to run YOLO instance segmentation models using the ONNX Runtime C++ API with native CUDA acceleration.
 
 ## Installation
 
@@ -74,7 +74,7 @@ from ultralytics import YOLO
 model = YOLO(<MODEL_PATH>)  # your trained weights
 model.export(format='onnx', imgsz=<YOUR MODEL PARAM>, opset=<YOUR MODEL PARAM>)
 ```
-NOTE: the ```.export``` has more params that you need to do reading to make sure your output and class is correct so read more in [Ultralytics](https://github.com/ultralytics/ultralytics) API before you do any conversion.
+* NOTE: the ```.export``` has more params that you need to do reading to make sure your output and class is correct so read more in [Ultralytics](https://github.com/ultralytics/ultralytics) API before you do any conversion.
 
 #### Debug & Verify
 Check if ldconfig know where libcudnn is
