@@ -66,6 +66,16 @@ cmake ..
 make -j4
 ```
 
+## Ultralytics model conversion
+Convert your <>.pt file you got from training with [Ultralytics](https://github.com/ultralytics/ultralytics) with
+```python
+from ultralytics import YOLO
+
+model = YOLO(<MODEL_PATH>)  # your trained weights
+model.export(format='onnx', imgsz=<YOUR MODEL PARAM>, opset=<YOUR MODEL PARAM>)
+```
+NOTE: the ```.export``` has more params that you need to do reading to make sure your output and class is correct so read more in [Ultralytics](https://github.com/ultralytics/ultralytics) API before you do any conversion.
+
 #### Debug & Verify
 Check if ldconfig know where libcudnn is
 ```
