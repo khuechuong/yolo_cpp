@@ -1,5 +1,5 @@
 # YOLO C++
-A lightweight, high-speed C++ deployment framework designed to run YOLO instance segmentation models using the ONNX Runtime C++ API with native CUDA acceleration.
+A lightweight, high-speed C++ deployment framework designed to run [Ultralytics](https://github.com/ultralytics/ultralytics) YOLO instance segmentation models using the ONNX Runtime C++ API with native CUDA acceleration.
 
 ## Installation
 
